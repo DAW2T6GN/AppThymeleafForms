@@ -26,6 +26,10 @@
                        th:field="*{peso}">
             </div>
             <button type="submit" class="btn btn-primary">CALCULAR IMC</button>
+            <div th:if="${visualizar}" class="alert" th:classappend="${colormensaje}" role="alert">
+               <span th:text="${resultado} ?: ''"></span>
+            </div>
+
         </form>
     </div>
 </div>
